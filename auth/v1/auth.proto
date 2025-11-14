@@ -1,0 +1,125 @@
+syntax = "proto3";
+
+package urappi.auth.v1;
+
+option go_package = "github.com/urappi/contracts/auth/v1;authv1";
+
+import "google/protobuf/timestamp.proto";
+import "common/v1/common.proto";
+
+// AuthService — сервис аутентификации и авторизации.
+service AuthService {
+  rpc Register (RegisterRequest) returns (RegisterResponse);
+
+  rpc Login (LoginRequest) returns (LoginResponse);
+
+  rpc RefreshTokens (RefreshTokensRequest) returns (RefreshTokensResponse);
+
+  rpc Logout (LogoutRequest) returns (LogoutResponse);
+
+  rpc VerifyEmail (VerifyEmailRequest) returns (VerifyEmailResponse);
+
+  rpc ForgotPassword (ForgotPasswordRequest) returns (ForgotPasswordResponse);
+
+  rpc ResetPassword (ResetPasswordRequest) returns (ResetPasswordResponse);
+
+  rpc GetMe (urappi.common.v1.Empty) returns (GetMeResponse);
+
+  rpc ValidateToken (ValidateTokenRequest) returns (ValidateTokenResponse);
+}
+
+
+message RegisterRequest {
+  string email = 1;
+  string password = 2;
+  string name = 3;
+}
+
+message RegisterResponse {
+  urappi.common.v1.User user = 1;
+  bool verification_required = 2;
+}
+
+// Login
+
+message LoginRequest {
+  string email = 1;
+  string password = 2;
+}
+
+message LoginResponse {
+  urappi.common.v1.TokenPair tokens = 1;
+  urappi.common.v1.User user = 2;
+}
+
+// RefreshTokens
+
+message RefreshTokensRequest {
+  string refresh_token = 1;
+}
+
+message RefreshTokensResponse {
+  urappi.common.v1.TokenPair tokens = 1;
+}
+
+// Logout
+
+message LogoutRequest {
+  string access_token = 1;
+  string refresh_token = 2;
+}
+
+message LogoutResponse {
+  bool success = 1;
+}
+
+// VerifyEmail
+
+message VerifyEmailRequest {
+  string verification_token = 1;
+}
+
+message VerifyEmailResponse {
+  bool success = 1;
+  urappi.common.v1.User user = 2;
+}
+
+// ForgotPassword
+
+message ForgotPasswordRequest {
+  string email = 1;
+}
+
+message ForgotPasswordResponse {
+  bool success = 1;
+}
+
+// ResetPassword
+
+message ResetPasswordRequest {
+  string reset_token = 1;
+  string new_password = 2;
+}
+
+message ResetPasswordResponse {
+  bool success = 1;
+}
+
+// GetMe
+
+message GetMeResponse {
+  urappi.common.v1.User user = 1;
+}
+
+// ValidateToken
+
+message ValidateTokenRequest {
+  string access_token = 1;
+}
+
+message ValidateTokenResponse {
+  bool is_valid = 1;
+  urappi.common.v1.UserContext user_context = 2;
+  google.protobuf.Timestamp token_expires_at = 3;
+  string reason = 4; 
+}

@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package urappi.common.v1;
+
+option go_package = "github.com/urappi/contracts/common/v1;commonv1";
+
+import "google/protobuf/timestamp.proto";
+
+message User {
+  string id = 1;
+  string email = 2;
+  string name = 3;
+  repeated string roles = 4;
+  bool email_verified = 5;
+  google.protobuf.Timestamp created_at = 6;
+  google.protobuf.Timestamp updated_at = 7;
+}
+
+message TokenPair {
+  string access_token = 1;
+  string refresh_token = 2;
+  google.protobuf.Timestamp access_token_expires_at = 3;
+  google.protobuf.Timestamp refresh_token_expires_at = 4;
+}
+
+message UserContext {
+  string user_id = 1;
+  string email = 2;
+  repeated string roles = 3;
+  bool email_verified = 4;
+}
+
+message Error {
+  string code = 1;
+  string message = 2;
+}
+
+message Empty {}
