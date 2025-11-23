@@ -1,4 +1,4 @@
-module github.com/urappi/contracts
+module github.com/urappi/urappi-contracts
 
-go 1.25.0
+go 1.25
 

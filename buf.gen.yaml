@@ -2,11 +2,11 @@ version: v1
 
 plugins:
   - name: go
-    out: gen/go
+    out: .
     opt:
       - paths=source_relative
 
   - name: go-grpc
-    out: gen/go
+    out: .
     opt:
       - paths=source_relative
