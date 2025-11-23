@@ -4,7 +4,7 @@
 // - protoc             (unknown)
 // source: urappi/auth/v1/auth.proto
 
-package authv1
+package commonv1
 
 import (
 	context "context"

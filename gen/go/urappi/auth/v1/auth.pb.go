@@ -4,10 +4,9 @@
 // 	protoc        (unknown)
 // source: urappi/auth/v1/auth.proto
 
-package authv1
+package commonv1
 
 import (
-	v1 "github.com/urappi/contracts/gen/go/common/v1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
@@ -85,7 +84,7 @@ func (x *RegisterRequest) GetName() string {
 
 type RegisterResponse struct {
 	state                protoimpl.MessageState `protogen:"open.v1"`
-	User                 *v1.User               `protobuf:"bytes,1,opt,name=user,proto3" json:"user,omitempty"`
+	User                 *User                  `protobuf:"bytes,1,opt,name=user,proto3" json:"user,omitempty"`
 	VerificationRequired bool                   `protobuf:"varint,2,opt,name=verification_required,json=verificationRequired,proto3" json:"verification_required,omitempty"`
 	unknownFields        protoimpl.UnknownFields
 	sizeCache            protoimpl.SizeCache
@@ -121,7 +120,7 @@ func (*RegisterResponse) Descriptor() ([]byte, []int) {
 	return file_urappi_auth_v1_auth_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *RegisterResponse) GetUser() *v1.User {
+func (x *RegisterResponse) GetUser() *User {
 	if x != nil {
 		return x.User
 	}
@@ -189,8 +188,8 @@ func (x *LoginRequest) GetPassword() string {
 
 type LoginResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Tokens        *v1.TokenPair          `protobuf:"bytes,1,opt,name=tokens,proto3" json:"tokens,omitempty"`
-	User          *v1.User               `protobuf:"bytes,2,opt,name=user,proto3" json:"user,omitempty"`
+	Tokens        *TokenPair             `protobuf:"bytes,1,opt,name=tokens,proto3" json:"tokens,omitempty"`
+	User          *User                  `protobuf:"bytes,2,opt,name=user,proto3" json:"user,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -225,14 +224,14 @@ func (*LoginResponse) Descriptor() ([]byte, []int) {
 	return file_urappi_auth_v1_auth_proto_rawDescGZIP(), []int{3}
 }
 
-func (x *LoginResponse) GetTokens() *v1.TokenPair {
+func (x *LoginResponse) GetTokens() *TokenPair {
 	if x != nil {
 		return x.Tokens
 	}
 	return nil
 }
 
-func (x *LoginResponse) GetUser() *v1.User {
+func (x *LoginResponse) GetUser() *User {
 	if x != nil {
 		return x.User
 	}
@@ -285,7 +284,7 @@ func (x *RefreshTokensRequest) GetRefreshToken() string {
 
 type RefreshTokensResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Tokens        *v1.TokenPair          `protobuf:"bytes,1,opt,name=tokens,proto3" json:"tokens,omitempty"`
+	Tokens        *TokenPair             `protobuf:"bytes,1,opt,name=tokens,proto3" json:"tokens,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -320,7 +319,7 @@ func (*RefreshTokensResponse) Descriptor() ([]byte, []int) {
 	return file_urappi_auth_v1_auth_proto_rawDescGZIP(), []int{5}
 }
 
-func (x *RefreshTokensResponse) GetTokens() *v1.TokenPair {
+func (x *RefreshTokensResponse) GetTokens() *TokenPair {
 	if x != nil {
 		return x.Tokens
 	}
@@ -470,7 +469,7 @@ func (x *VerifyEmailRequest) GetVerificationToken() string {
 type VerifyEmailResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Success       bool                   `protobuf:"varint,1,opt,name=success,proto3" json:"success,omitempty"`
-	User          *v1.User               `protobuf:"bytes,2,opt,name=user,proto3" json:"user,omitempty"`
+	User          *User                  `protobuf:"bytes,2,opt,name=user,proto3" json:"user,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -512,7 +511,7 @@ func (x *VerifyEmailResponse) GetSuccess() bool {
 	return false
 }
 
-func (x *VerifyEmailResponse) GetUser() *v1.User {
+func (x *VerifyEmailResponse) GetUser() *User {
 	if x != nil {
 		return x.User
 	}
@@ -741,7 +740,7 @@ func (*GetMeRequest) Descriptor() ([]byte, []int) {
 
 type GetMeResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	User          *v1.User               `protobuf:"bytes,1,opt,name=user,proto3" json:"user,omitempty"`
+	User          *User                  `protobuf:"bytes,1,opt,name=user,proto3" json:"user,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -776,7 +775,7 @@ func (*GetMeResponse) Descriptor() ([]byte, []int) {
 	return file_urappi_auth_v1_auth_proto_rawDescGZIP(), []int{15}
 }
 
-func (x *GetMeResponse) GetUser() *v1.User {
+func (x *GetMeResponse) GetUser() *User {
 	if x != nil {
 		return x.User
 	}
@@ -830,7 +829,7 @@ func (x *ValidateTokenRequest) GetAccessToken() string {
 type ValidateTokenResponse struct {
 	state          protoimpl.MessageState `protogen:"open.v1"`
 	IsValid        bool                   `protobuf:"varint,1,opt,name=is_valid,json=isValid,proto3" json:"is_valid,omitempty"`
-	UserContext    *v1.UserContext        `protobuf:"bytes,2,opt,name=user_context,json=userContext,proto3" json:"user_context,omitempty"`
+	UserContext    *UserContext           `protobuf:"bytes,2,opt,name=user_context,json=userContext,proto3" json:"user_context,omitempty"`
 	TokenExpiresAt *timestamppb.Timestamp `protobuf:"bytes,3,opt,name=token_expires_at,json=tokenExpiresAt,proto3" json:"token_expires_at,omitempty"`
 	Reason         string                 `protobuf:"bytes,4,opt,name=reason,proto3" json:"reason,omitempty"`
 	unknownFields  protoimpl.UnknownFields
@@ -874,7 +873,7 @@ func (x *ValidateTokenResponse) GetIsValid() bool {
 	return false
 }
 
-func (x *ValidateTokenResponse) GetUserContext() *v1.UserContext {
+func (x *ValidateTokenResponse) GetUserContext() *UserContext {
 	if x != nil {
 		return x.UserContext
 	}
@@ -956,7 +955,7 @@ const file_urappi_auth_v1_auth_proto_rawDesc = "" +
 	"\x0eForgotPassword\x12%.urappi.auth.v1.ForgotPasswordRequest\x1a&.urappi.auth.v1.ForgotPasswordResponse\x12\\\n" +
 	"\rResetPassword\x12$.urappi.auth.v1.ResetPasswordRequest\x1a%.urappi.auth.v1.ResetPasswordResponse\x12D\n" +
 	"\x05GetMe\x12\x1c.urappi.auth.v1.GetMeRequest\x1a\x1d.urappi.auth.v1.GetMeResponse\x12\\\n" +
-	"\rValidateToken\x12$.urappi.auth.v1.ValidateTokenRequest\x1a%.urappi.auth.v1.ValidateTokenResponseB3Z1github.com/urappi/contracts/gen/go/auth/v1;authv1b\x06proto3"
+	"\rValidateToken\x12$.urappi.auth.v1.ValidateTokenRequest\x1a%.urappi.auth.v1.ValidateTokenResponseB7Z5github.com/urappi/contracts/urappi/common/v1;commonv1b\x06proto3"
 
 var (
 	file_urappi_auth_v1_auth_proto_rawDescOnce sync.Once
@@ -990,9 +989,9 @@ var file_urappi_auth_v1_auth_proto_goTypes = []any{
 	(*GetMeResponse)(nil),          // 15: urappi.auth.v1.GetMeResponse
 	(*ValidateTokenRequest)(nil),   // 16: urappi.auth.v1.ValidateTokenRequest
 	(*ValidateTokenResponse)(nil),  // 17: urappi.auth.v1.ValidateTokenResponse
-	(*v1.User)(nil),                // 18: urappi.common.v1.User
-	(*v1.TokenPair)(nil),           // 19: urappi.common.v1.TokenPair
-	(*v1.UserContext)(nil),         // 20: urappi.common.v1.UserContext
+	(*User)(nil),                   // 18: urappi.common.v1.User
+	(*TokenPair)(nil),              // 19: urappi.common.v1.TokenPair
+	(*UserContext)(nil),            // 20: urappi.common.v1.UserContext
 	(*timestamppb.Timestamp)(nil),  // 21: google.protobuf.Timestamp
 }
 var file_urappi_auth_v1_auth_proto_depIdxs = []int32{
@@ -1034,6 +1033,7 @@ func file_urappi_auth_v1_auth_proto_init() {
 	if File_urappi_auth_v1_auth_proto != nil {
 		return
 	}
+	file_urappi_common_v1_common_proto_init()
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
