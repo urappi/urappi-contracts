@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.36.10
 // 	protoc        (unknown)
-// source: common/v1/common.proto
+// source: urappi/common/v1/common.proto
 
 package commonv1
 
@@ -37,7 +37,7 @@ type User struct {
 
 func (x *User) Reset() {
 	*x = User{}
-	mi := &file_common_v1_common_proto_msgTypes[0]
+	mi := &file_urappi_common_v1_common_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -49,7 +49,7 @@ func (x *User) String() string {
 func (*User) ProtoMessage() {}
 
 func (x *User) ProtoReflect() protoreflect.Message {
-	mi := &file_common_v1_common_proto_msgTypes[0]
+	mi := &file_urappi_common_v1_common_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -62,7 +62,7 @@ func (x *User) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use User.ProtoReflect.Descriptor instead.
 func (*User) Descriptor() ([]byte, []int) {
-	return file_common_v1_common_proto_rawDescGZIP(), []int{0}
+	return file_urappi_common_v1_common_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *User) GetId() string {
@@ -126,7 +126,7 @@ type TokenPair struct {
 
 func (x *TokenPair) Reset() {
 	*x = TokenPair{}
-	mi := &file_common_v1_common_proto_msgTypes[1]
+	mi := &file_urappi_common_v1_common_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -138,7 +138,7 @@ func (x *TokenPair) String() string {
 func (*TokenPair) ProtoMessage() {}
 
 func (x *TokenPair) ProtoReflect() protoreflect.Message {
-	mi := &file_common_v1_common_proto_msgTypes[1]
+	mi := &file_urappi_common_v1_common_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -151,7 +151,7 @@ func (x *TokenPair) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TokenPair.ProtoReflect.Descriptor instead.
 func (*TokenPair) Descriptor() ([]byte, []int) {
-	return file_common_v1_common_proto_rawDescGZIP(), []int{1}
+	return file_urappi_common_v1_common_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *TokenPair) GetAccessToken() string {
@@ -194,7 +194,7 @@ type UserContext struct {
 
 func (x *UserContext) Reset() {
 	*x = UserContext{}
-	mi := &file_common_v1_common_proto_msgTypes[2]
+	mi := &file_urappi_common_v1_common_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -206,7 +206,7 @@ func (x *UserContext) String() string {
 func (*UserContext) ProtoMessage() {}
 
 func (x *UserContext) ProtoReflect() protoreflect.Message {
-	mi := &file_common_v1_common_proto_msgTypes[2]
+	mi := &file_urappi_common_v1_common_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -219,7 +219,7 @@ func (x *UserContext) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UserContext.ProtoReflect.Descriptor instead.
 func (*UserContext) Descriptor() ([]byte, []int) {
-	return file_common_v1_common_proto_rawDescGZIP(), []int{2}
+	return file_urappi_common_v1_common_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *UserContext) GetUserId() string {
@@ -260,7 +260,7 @@ type Error struct {
 
 func (x *Error) Reset() {
 	*x = Error{}
-	mi := &file_common_v1_common_proto_msgTypes[3]
+	mi := &file_urappi_common_v1_common_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -272,7 +272,7 @@ func (x *Error) String() string {
 func (*Error) ProtoMessage() {}
 
 func (x *Error) ProtoReflect() protoreflect.Message {
-	mi := &file_common_v1_common_proto_msgTypes[3]
+	mi := &file_urappi_common_v1_common_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -285,7 +285,7 @@ func (x *Error) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Error.ProtoReflect.Descriptor instead.
 func (*Error) Descriptor() ([]byte, []int) {
-	return file_common_v1_common_proto_rawDescGZIP(), []int{3}
+	return file_urappi_common_v1_common_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *Error) GetCode() string {
@@ -310,7 +310,7 @@ type Empty struct {
 
 func (x *Empty) Reset() {
 	*x = Empty{}
-	mi := &file_common_v1_common_proto_msgTypes[4]
+	mi := &file_urappi_common_v1_common_proto_msgTypes[4]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -322,7 +322,7 @@ func (x *Empty) String() string {
 func (*Empty) ProtoMessage() {}
 
 func (x *Empty) ProtoReflect() protoreflect.Message {
-	mi := &file_common_v1_common_proto_msgTypes[4]
+	mi := &file_urappi_common_v1_common_proto_msgTypes[4]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -335,14 +335,14 @@ func (x *Empty) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Empty.ProtoReflect.Descriptor instead.
 func (*Empty) Descriptor() ([]byte, []int) {
-	return file_common_v1_common_proto_rawDescGZIP(), []int{4}
+	return file_urappi_common_v1_common_proto_rawDescGZIP(), []int{4}
 }
 
-var File_common_v1_common_proto protoreflect.FileDescriptor
+var File_urappi_common_v1_common_proto protoreflect.FileDescriptor
 
-const file_common_v1_common_proto_rawDesc = "" +
+const file_urappi_common_v1_common_proto_rawDesc = "" +
 	"\n" +
-	"\x16common/v1/common.proto\x12\x10urappi.common.v1\x1a\x1fgoogle/protobuf/timestamp.proto\"\xf3\x01\n" +
+	"\x1durappi/common/v1/common.proto\x12\x10urappi.common.v1\x1a\x1fgoogle/protobuf/timestamp.proto\"\xf3\x01\n" +
 	"\x04User\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x14\n" +
 	"\x05email\x18\x02 \x01(\tR\x05email\x12\x12\n" +
@@ -366,22 +366,22 @@ const file_common_v1_common_proto_rawDesc = "" +
 	"\x05Error\x12\x12\n" +
 	"\x04code\x18\x01 \x01(\tR\x04code\x12\x18\n" +
 	"\amessage\x18\x02 \x01(\tR\amessage\"\a\n" +
-	"\x05EmptyB0Z.github.com/urappi/contracts/common/v1;commonv1b\x06proto3"
+	"\x05EmptyB7Z5github.com/urappi/contracts/gen/go/common/v1;commonv1b\x06proto3"
 
 var (
-	file_common_v1_common_proto_rawDescOnce sync.Once
-	file_common_v1_common_proto_rawDescData []byte
+	file_urappi_common_v1_common_proto_rawDescOnce sync.Once
+	file_urappi_common_v1_common_proto_rawDescData []byte
 )
 
-func file_common_v1_common_proto_rawDescGZIP() []byte {
-	file_common_v1_common_proto_rawDescOnce.Do(func() {
-		file_common_v1_common_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_common_v1_common_proto_rawDesc), len(file_common_v1_common_proto_rawDesc)))
+func file_urappi_common_v1_common_proto_rawDescGZIP() []byte {
+	file_urappi_common_v1_common_proto_rawDescOnce.Do(func() {
+		file_urappi_common_v1_common_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_urappi_common_v1_common_proto_rawDesc), len(file_urappi_common_v1_common_proto_rawDesc)))
 	})
-	return file_common_v1_common_proto_rawDescData
+	return file_urappi_common_v1_common_proto_rawDescData
 }
 
-var file_common_v1_common_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
-var file_common_v1_common_proto_goTypes = []any{
+var file_urappi_common_v1_common_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
+var file_urappi_common_v1_common_proto_goTypes = []any{
 	(*User)(nil),                  // 0: urappi.common.v1.User
 	(*TokenPair)(nil),             // 1: urappi.common.v1.TokenPair
 	(*UserContext)(nil),           // 2: urappi.common.v1.UserContext
@@ -389,7 +389,7 @@ var file_common_v1_common_proto_goTypes = []any{
 	(*Empty)(nil),                 // 4: urappi.common.v1.Empty
 	(*timestamppb.Timestamp)(nil), // 5: google.protobuf.Timestamp
 }
-var file_common_v1_common_proto_depIdxs = []int32{
+var file_urappi_common_v1_common_proto_depIdxs = []int32{
 	5, // 0: urappi.common.v1.User.created_at:type_name -> google.protobuf.Timestamp
 	5, // 1: urappi.common.v1.User.updated_at:type_name -> google.protobuf.Timestamp
 	5, // 2: urappi.common.v1.TokenPair.access_token_expires_at:type_name -> google.protobuf.Timestamp
@@ -401,26 +401,26 @@ var file_common_v1_common_proto_depIdxs = []int32{
 	0, // [0:4] is the sub-list for field type_name
 }
 
-func init() { file_common_v1_common_proto_init() }
-func file_common_v1_common_proto_init() {
-	if File_common_v1_common_proto != nil {
+func init() { file_urappi_common_v1_common_proto_init() }
+func file_urappi_common_v1_common_proto_init() {
+	if File_urappi_common_v1_common_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_common_v1_common_proto_rawDesc), len(file_common_v1_common_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_urappi_common_v1_common_proto_rawDesc), len(file_urappi_common_v1_common_proto_rawDesc)),
 			NumEnums:      0,
 			NumMessages:   5,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_common_v1_common_proto_goTypes,
-		DependencyIndexes: file_common_v1_common_proto_depIdxs,
-		MessageInfos:      file_common_v1_common_proto_msgTypes,
+		GoTypes:           file_urappi_common_v1_common_proto_goTypes,
+		DependencyIndexes: file_urappi_common_v1_common_proto_depIdxs,
+		MessageInfos:      file_urappi_common_v1_common_proto_msgTypes,
 	}.Build()
-	File_common_v1_common_proto = out.File
-	file_common_v1_common_proto_goTypes = nil
-	file_common_v1_common_proto_depIdxs = nil
+	File_urappi_common_v1_common_proto = out.File
+	file_urappi_common_v1_common_proto_goTypes = nil
+	file_urappi_common_v1_common_proto_depIdxs = nil
 }
