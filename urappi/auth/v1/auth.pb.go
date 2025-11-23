@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.36.10
 // 	protoc        (unknown)
-// source: auth/v1/auth.proto
+// source: urappi/auth/v1/auth.proto
 
 package authv1
 
@@ -34,7 +34,7 @@ type RegisterRequest struct {
 
 func (x *RegisterRequest) Reset() {
 	*x = RegisterRequest{}
-	mi := &file_auth_v1_auth_proto_msgTypes[0]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -46,7 +46,7 @@ func (x *RegisterRequest) String() string {
 func (*RegisterRequest) ProtoMessage() {}
 
 func (x *RegisterRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_auth_v1_auth_proto_msgTypes[0]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -59,7 +59,7 @@ func (x *RegisterRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RegisterRequest.ProtoReflect.Descriptor instead.
 func (*RegisterRequest) Descriptor() ([]byte, []int) {
-	return file_auth_v1_auth_proto_rawDescGZIP(), []int{0}
+	return file_urappi_auth_v1_auth_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *RegisterRequest) GetEmail() string {
@@ -93,7 +93,7 @@ type RegisterResponse struct {
 
 func (x *RegisterResponse) Reset() {
 	*x = RegisterResponse{}
-	mi := &file_auth_v1_auth_proto_msgTypes[1]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -105,7 +105,7 @@ func (x *RegisterResponse) String() string {
 func (*RegisterResponse) ProtoMessage() {}
 
 func (x *RegisterResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_auth_v1_auth_proto_msgTypes[1]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -118,7 +118,7 @@ func (x *RegisterResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RegisterResponse.ProtoReflect.Descriptor instead.
 func (*RegisterResponse) Descriptor() ([]byte, []int) {
-	return file_auth_v1_auth_proto_rawDescGZIP(), []int{1}
+	return file_urappi_auth_v1_auth_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *RegisterResponse) GetUser() *v1.User {
@@ -145,7 +145,7 @@ type LoginRequest struct {
 
 func (x *LoginRequest) Reset() {
 	*x = LoginRequest{}
-	mi := &file_auth_v1_auth_proto_msgTypes[2]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -157,7 +157,7 @@ func (x *LoginRequest) String() string {
 func (*LoginRequest) ProtoMessage() {}
 
 func (x *LoginRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_auth_v1_auth_proto_msgTypes[2]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -170,7 +170,7 @@ func (x *LoginRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use LoginRequest.ProtoReflect.Descriptor instead.
 func (*LoginRequest) Descriptor() ([]byte, []int) {
-	return file_auth_v1_auth_proto_rawDescGZIP(), []int{2}
+	return file_urappi_auth_v1_auth_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *LoginRequest) GetEmail() string {
@@ -197,7 +197,7 @@ type LoginResponse struct {
 
 func (x *LoginResponse) Reset() {
 	*x = LoginResponse{}
-	mi := &file_auth_v1_auth_proto_msgTypes[3]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -209,7 +209,7 @@ func (x *LoginResponse) String() string {
 func (*LoginResponse) ProtoMessage() {}
 
 func (x *LoginResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_auth_v1_auth_proto_msgTypes[3]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -222,7 +222,7 @@ func (x *LoginResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use LoginResponse.ProtoReflect.Descriptor instead.
 func (*LoginResponse) Descriptor() ([]byte, []int) {
-	return file_auth_v1_auth_proto_rawDescGZIP(), []int{3}
+	return file_urappi_auth_v1_auth_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *LoginResponse) GetTokens() *v1.TokenPair {
@@ -248,7 +248,7 @@ type RefreshTokensRequest struct {
 
 func (x *RefreshTokensRequest) Reset() {
 	*x = RefreshTokensRequest{}
-	mi := &file_auth_v1_auth_proto_msgTypes[4]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[4]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -260,7 +260,7 @@ func (x *RefreshTokensRequest) String() string {
 func (*RefreshTokensRequest) ProtoMessage() {}
 
 func (x *RefreshTokensRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_auth_v1_auth_proto_msgTypes[4]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[4]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -273,7 +273,7 @@ func (x *RefreshTokensRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RefreshTokensRequest.ProtoReflect.Descriptor instead.
 func (*RefreshTokensRequest) Descriptor() ([]byte, []int) {
-	return file_auth_v1_auth_proto_rawDescGZIP(), []int{4}
+	return file_urappi_auth_v1_auth_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *RefreshTokensRequest) GetRefreshToken() string {
@@ -292,7 +292,7 @@ type RefreshTokensResponse struct {
 
 func (x *RefreshTokensResponse) Reset() {
 	*x = RefreshTokensResponse{}
-	mi := &file_auth_v1_auth_proto_msgTypes[5]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[5]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -304,7 +304,7 @@ func (x *RefreshTokensResponse) String() string {
 func (*RefreshTokensResponse) ProtoMessage() {}
 
 func (x *RefreshTokensResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_auth_v1_auth_proto_msgTypes[5]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[5]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -317,7 +317,7 @@ func (x *RefreshTokensResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RefreshTokensResponse.ProtoReflect.Descriptor instead.
 func (*RefreshTokensResponse) Descriptor() ([]byte, []int) {
-	return file_auth_v1_auth_proto_rawDescGZIP(), []int{5}
+	return file_urappi_auth_v1_auth_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *RefreshTokensResponse) GetTokens() *v1.TokenPair {
@@ -337,7 +337,7 @@ type LogoutRequest struct {
 
 func (x *LogoutRequest) Reset() {
 	*x = LogoutRequest{}
-	mi := &file_auth_v1_auth_proto_msgTypes[6]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[6]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -349,7 +349,7 @@ func (x *LogoutRequest) String() string {
 func (*LogoutRequest) ProtoMessage() {}
 
 func (x *LogoutRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_auth_v1_auth_proto_msgTypes[6]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[6]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -362,7 +362,7 @@ func (x *LogoutRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use LogoutRequest.ProtoReflect.Descriptor instead.
 func (*LogoutRequest) Descriptor() ([]byte, []int) {
-	return file_auth_v1_auth_proto_rawDescGZIP(), []int{6}
+	return file_urappi_auth_v1_auth_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *LogoutRequest) GetAccessToken() string {
@@ -388,7 +388,7 @@ type LogoutResponse struct {
 
 func (x *LogoutResponse) Reset() {
 	*x = LogoutResponse{}
-	mi := &file_auth_v1_auth_proto_msgTypes[7]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[7]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -400,7 +400,7 @@ func (x *LogoutResponse) String() string {
 func (*LogoutResponse) ProtoMessage() {}
 
 func (x *LogoutResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_auth_v1_auth_proto_msgTypes[7]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[7]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -413,7 +413,7 @@ func (x *LogoutResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use LogoutResponse.ProtoReflect.Descriptor instead.
 func (*LogoutResponse) Descriptor() ([]byte, []int) {
-	return file_auth_v1_auth_proto_rawDescGZIP(), []int{7}
+	return file_urappi_auth_v1_auth_proto_rawDescGZIP(), []int{7}
 }
 
 func (x *LogoutResponse) GetSuccess() bool {
@@ -432,7 +432,7 @@ type VerifyEmailRequest struct {
 
 func (x *VerifyEmailRequest) Reset() {
 	*x = VerifyEmailRequest{}
-	mi := &file_auth_v1_auth_proto_msgTypes[8]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[8]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -444,7 +444,7 @@ func (x *VerifyEmailRequest) String() string {
 func (*VerifyEmailRequest) ProtoMessage() {}
 
 func (x *VerifyEmailRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_auth_v1_auth_proto_msgTypes[8]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[8]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -457,7 +457,7 @@ func (x *VerifyEmailRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VerifyEmailRequest.ProtoReflect.Descriptor instead.
 func (*VerifyEmailRequest) Descriptor() ([]byte, []int) {
-	return file_auth_v1_auth_proto_rawDescGZIP(), []int{8}
+	return file_urappi_auth_v1_auth_proto_rawDescGZIP(), []int{8}
 }
 
 func (x *VerifyEmailRequest) GetVerificationToken() string {
@@ -477,7 +477,7 @@ type VerifyEmailResponse struct {
 
 func (x *VerifyEmailResponse) Reset() {
 	*x = VerifyEmailResponse{}
-	mi := &file_auth_v1_auth_proto_msgTypes[9]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[9]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -489,7 +489,7 @@ func (x *VerifyEmailResponse) String() string {
 func (*VerifyEmailResponse) ProtoMessage() {}
 
 func (x *VerifyEmailResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_auth_v1_auth_proto_msgTypes[9]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[9]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -502,7 +502,7 @@ func (x *VerifyEmailResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use VerifyEmailResponse.ProtoReflect.Descriptor instead.
 func (*VerifyEmailResponse) Descriptor() ([]byte, []int) {
-	return file_auth_v1_auth_proto_rawDescGZIP(), []int{9}
+	return file_urappi_auth_v1_auth_proto_rawDescGZIP(), []int{9}
 }
 
 func (x *VerifyEmailResponse) GetSuccess() bool {
@@ -528,7 +528,7 @@ type ForgotPasswordRequest struct {
 
 func (x *ForgotPasswordRequest) Reset() {
 	*x = ForgotPasswordRequest{}
-	mi := &file_auth_v1_auth_proto_msgTypes[10]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[10]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -540,7 +540,7 @@ func (x *ForgotPasswordRequest) String() string {
 func (*ForgotPasswordRequest) ProtoMessage() {}
 
 func (x *ForgotPasswordRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_auth_v1_auth_proto_msgTypes[10]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[10]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -553,7 +553,7 @@ func (x *ForgotPasswordRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ForgotPasswordRequest.ProtoReflect.Descriptor instead.
 func (*ForgotPasswordRequest) Descriptor() ([]byte, []int) {
-	return file_auth_v1_auth_proto_rawDescGZIP(), []int{10}
+	return file_urappi_auth_v1_auth_proto_rawDescGZIP(), []int{10}
 }
 
 func (x *ForgotPasswordRequest) GetEmail() string {
@@ -572,7 +572,7 @@ type ForgotPasswordResponse struct {
 
 func (x *ForgotPasswordResponse) Reset() {
 	*x = ForgotPasswordResponse{}
-	mi := &file_auth_v1_auth_proto_msgTypes[11]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[11]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -584,7 +584,7 @@ func (x *ForgotPasswordResponse) String() string {
 func (*ForgotPasswordResponse) ProtoMessage() {}
 
 func (x *ForgotPasswordResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_auth_v1_auth_proto_msgTypes[11]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[11]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -597,7 +597,7 @@ func (x *ForgotPasswordResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ForgotPasswordResponse.ProtoReflect.Descriptor instead.
 func (*ForgotPasswordResponse) Descriptor() ([]byte, []int) {
-	return file_auth_v1_auth_proto_rawDescGZIP(), []int{11}
+	return file_urappi_auth_v1_auth_proto_rawDescGZIP(), []int{11}
 }
 
 func (x *ForgotPasswordResponse) GetSuccess() bool {
@@ -617,7 +617,7 @@ type ResetPasswordRequest struct {
 
 func (x *ResetPasswordRequest) Reset() {
 	*x = ResetPasswordRequest{}
-	mi := &file_auth_v1_auth_proto_msgTypes[12]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[12]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -629,7 +629,7 @@ func (x *ResetPasswordRequest) String() string {
 func (*ResetPasswordRequest) ProtoMessage() {}
 
 func (x *ResetPasswordRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_auth_v1_auth_proto_msgTypes[12]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[12]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -642,7 +642,7 @@ func (x *ResetPasswordRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ResetPasswordRequest.ProtoReflect.Descriptor instead.
 func (*ResetPasswordRequest) Descriptor() ([]byte, []int) {
-	return file_auth_v1_auth_proto_rawDescGZIP(), []int{12}
+	return file_urappi_auth_v1_auth_proto_rawDescGZIP(), []int{12}
 }
 
 func (x *ResetPasswordRequest) GetResetToken() string {
@@ -668,7 +668,7 @@ type ResetPasswordResponse struct {
 
 func (x *ResetPasswordResponse) Reset() {
 	*x = ResetPasswordResponse{}
-	mi := &file_auth_v1_auth_proto_msgTypes[13]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[13]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -680,7 +680,7 @@ func (x *ResetPasswordResponse) String() string {
 func (*ResetPasswordResponse) ProtoMessage() {}
 
 func (x *ResetPasswordResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_auth_v1_auth_proto_msgTypes[13]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[13]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -693,7 +693,7 @@ func (x *ResetPasswordResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ResetPasswordResponse.ProtoReflect.Descriptor instead.
 func (*ResetPasswordResponse) Descriptor() ([]byte, []int) {
-	return file_auth_v1_auth_proto_rawDescGZIP(), []int{13}
+	return file_urappi_auth_v1_auth_proto_rawDescGZIP(), []int{13}
 }
 
 func (x *ResetPasswordResponse) GetSuccess() bool {
@@ -701,6 +701,42 @@ func (x *ResetPasswordResponse) GetSuccess() bool {
 		return x.Success
 	}
 	return false
+}
+
+type GetMeRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetMeRequest) Reset() {
+	*x = GetMeRequest{}
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[14]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetMeRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetMeRequest) ProtoMessage() {}
+
+func (x *GetMeRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[14]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetMeRequest.ProtoReflect.Descriptor instead.
+func (*GetMeRequest) Descriptor() ([]byte, []int) {
+	return file_urappi_auth_v1_auth_proto_rawDescGZIP(), []int{14}
 }
 
 type GetMeResponse struct {
@@ -712,7 +748,7 @@ type GetMeResponse struct {
 
 func (x *GetMeResponse) Reset() {
 	*x = GetMeResponse{}
-	mi := &file_auth_v1_auth_proto_msgTypes[14]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[15]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -724,7 +760,7 @@ func (x *GetMeResponse) String() string {
 func (*GetMeResponse) ProtoMessage() {}
 
 func (x *GetMeResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_auth_v1_auth_proto_msgTypes[14]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[15]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -737,7 +773,7 @@ func (x *GetMeResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetMeResponse.ProtoReflect.Descriptor instead.
 func (*GetMeResponse) Descriptor() ([]byte, []int) {
-	return file_auth_v1_auth_proto_rawDescGZIP(), []int{14}
+	return file_urappi_auth_v1_auth_proto_rawDescGZIP(), []int{15}
 }
 
 func (x *GetMeResponse) GetUser() *v1.User {
@@ -756,7 +792,7 @@ type ValidateTokenRequest struct {
 
 func (x *ValidateTokenRequest) Reset() {
 	*x = ValidateTokenRequest{}
-	mi := &file_auth_v1_auth_proto_msgTypes[15]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[16]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -768,7 +804,7 @@ func (x *ValidateTokenRequest) String() string {
 func (*ValidateTokenRequest) ProtoMessage() {}
 
 func (x *ValidateTokenRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_auth_v1_auth_proto_msgTypes[15]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[16]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -781,7 +817,7 @@ func (x *ValidateTokenRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ValidateTokenRequest.ProtoReflect.Descriptor instead.
 func (*ValidateTokenRequest) Descriptor() ([]byte, []int) {
-	return file_auth_v1_auth_proto_rawDescGZIP(), []int{15}
+	return file_urappi_auth_v1_auth_proto_rawDescGZIP(), []int{16}
 }
 
 func (x *ValidateTokenRequest) GetAccessToken() string {
@@ -803,7 +839,7 @@ type ValidateTokenResponse struct {
 
 func (x *ValidateTokenResponse) Reset() {
 	*x = ValidateTokenResponse{}
-	mi := &file_auth_v1_auth_proto_msgTypes[16]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[17]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -815,7 +851,7 @@ func (x *ValidateTokenResponse) String() string {
 func (*ValidateTokenResponse) ProtoMessage() {}
 
 func (x *ValidateTokenResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_auth_v1_auth_proto_msgTypes[16]
+	mi := &file_urappi_auth_v1_auth_proto_msgTypes[17]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -828,7 +864,7 @@ func (x *ValidateTokenResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ValidateTokenResponse.ProtoReflect.Descriptor instead.
 func (*ValidateTokenResponse) Descriptor() ([]byte, []int) {
-	return file_auth_v1_auth_proto_rawDescGZIP(), []int{16}
+	return file_urappi_auth_v1_auth_proto_rawDescGZIP(), []int{17}
 }
 
 func (x *ValidateTokenResponse) GetIsValid() bool {
@@ -859,11 +895,11 @@ func (x *ValidateTokenResponse) GetReason() string {
 	return ""
 }
 
-var File_auth_v1_auth_proto protoreflect.FileDescriptor
+var File_urappi_auth_v1_auth_proto protoreflect.FileDescriptor
 
-const file_auth_v1_auth_proto_rawDesc = "" +
+const file_urappi_auth_v1_auth_proto_rawDesc = "" +
 	"\n" +
-	"\x12auth/v1/auth.proto\x12\x0eurappi.auth.v1\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x16common/v1/common.proto\"W\n" +
+	"\x19urappi/auth/v1/auth.proto\x12\x0eurappi.auth.v1\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1durappi/common/v1/common.proto\"W\n" +
 	"\x0fRegisterRequest\x12\x14\n" +
 	"\x05email\x18\x01 \x01(\tR\x05email\x12\x1a\n" +
 	"\bpassword\x18\x02 \x01(\tR\bpassword\x12\x12\n" +
@@ -900,7 +936,8 @@ const file_auth_v1_auth_proto_rawDesc = "" +
 	"resetToken\x12!\n" +
 	"\fnew_password\x18\x02 \x01(\tR\vnewPassword\"1\n" +
 	"\x15ResetPasswordResponse\x12\x18\n" +
-	"\asuccess\x18\x01 \x01(\bR\asuccess\";\n" +
+	"\asuccess\x18\x01 \x01(\bR\asuccess\"\x0e\n" +
+	"\fGetMeRequest\";\n" +
 	"\rGetMeResponse\x12*\n" +
 	"\x04user\x18\x01 \x01(\v2\x16.urappi.common.v1.UserR\x04user\"9\n" +
 	"\x14ValidateTokenRequest\x12!\n" +
@@ -909,7 +946,7 @@ const file_auth_v1_auth_proto_rawDesc = "" +
 	"\bis_valid\x18\x01 \x01(\bR\aisValid\x12@\n" +
 	"\fuser_context\x18\x02 \x01(\v2\x1d.urappi.common.v1.UserContextR\vuserContext\x12D\n" +
 	"\x10token_expires_at\x18\x03 \x01(\v2\x1a.google.protobuf.TimestampR\x0etokenExpiresAt\x12\x16\n" +
-	"\x06reason\x18\x04 \x01(\tR\x06reason2\xff\x05\n" +
+	"\x06reason\x18\x04 \x01(\tR\x06reason2\x84\x06\n" +
 	"\vAuthService\x12M\n" +
 	"\bRegister\x12\x1f.urappi.auth.v1.RegisterRequest\x1a .urappi.auth.v1.RegisterResponse\x12D\n" +
 	"\x05Login\x12\x1c.urappi.auth.v1.LoginRequest\x1a\x1d.urappi.auth.v1.LoginResponse\x12\\\n" +
@@ -917,24 +954,24 @@ const file_auth_v1_auth_proto_rawDesc = "" +
 	"\x06Logout\x12\x1d.urappi.auth.v1.LogoutRequest\x1a\x1e.urappi.auth.v1.LogoutResponse\x12V\n" +
 	"\vVerifyEmail\x12\".urappi.auth.v1.VerifyEmailRequest\x1a#.urappi.auth.v1.VerifyEmailResponse\x12_\n" +
 	"\x0eForgotPassword\x12%.urappi.auth.v1.ForgotPasswordRequest\x1a&.urappi.auth.v1.ForgotPasswordResponse\x12\\\n" +
-	"\rResetPassword\x12$.urappi.auth.v1.ResetPasswordRequest\x1a%.urappi.auth.v1.ResetPasswordResponse\x12?\n" +
-	"\x05GetMe\x12\x17.urappi.common.v1.Empty\x1a\x1d.urappi.auth.v1.GetMeResponse\x12\\\n" +
-	"\rValidateToken\x12$.urappi.auth.v1.ValidateTokenRequest\x1a%.urappi.auth.v1.ValidateTokenResponseB,Z*github.com/urappi/contracts/auth/v1;authv1b\x06proto3"
+	"\rResetPassword\x12$.urappi.auth.v1.ResetPasswordRequest\x1a%.urappi.auth.v1.ResetPasswordResponse\x12D\n" +
+	"\x05GetMe\x12\x1c.urappi.auth.v1.GetMeRequest\x1a\x1d.urappi.auth.v1.GetMeResponse\x12\\\n" +
+	"\rValidateToken\x12$.urappi.auth.v1.ValidateTokenRequest\x1a%.urappi.auth.v1.ValidateTokenResponseB3Z1github.com/urappi/contracts/gen/go/auth/v1;authv1b\x06proto3"
 
 var (
-	file_auth_v1_auth_proto_rawDescOnce sync.Once
-	file_auth_v1_auth_proto_rawDescData []byte
+	file_urappi_auth_v1_auth_proto_rawDescOnce sync.Once
+	file_urappi_auth_v1_auth_proto_rawDescData []byte
 )
 
-func file_auth_v1_auth_proto_rawDescGZIP() []byte {
-	file_auth_v1_auth_proto_rawDescOnce.Do(func() {
-		file_auth_v1_auth_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_auth_v1_auth_proto_rawDesc), len(file_auth_v1_auth_proto_rawDesc)))
+func file_urappi_auth_v1_auth_proto_rawDescGZIP() []byte {
+	file_urappi_auth_v1_auth_proto_rawDescOnce.Do(func() {
+		file_urappi_auth_v1_auth_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_urappi_auth_v1_auth_proto_rawDesc), len(file_urappi_auth_v1_auth_proto_rawDesc)))
 	})
-	return file_auth_v1_auth_proto_rawDescData
+	return file_urappi_auth_v1_auth_proto_rawDescData
 }
 
-var file_auth_v1_auth_proto_msgTypes = make([]protoimpl.MessageInfo, 17)
-var file_auth_v1_auth_proto_goTypes = []any{
+var file_urappi_auth_v1_auth_proto_msgTypes = make([]protoimpl.MessageInfo, 18)
+var file_urappi_auth_v1_auth_proto_goTypes = []any{
 	(*RegisterRequest)(nil),        // 0: urappi.auth.v1.RegisterRequest
 	(*RegisterResponse)(nil),       // 1: urappi.auth.v1.RegisterResponse
 	(*LoginRequest)(nil),           // 2: urappi.auth.v1.LoginRequest
@@ -949,24 +986,24 @@ var file_auth_v1_auth_proto_goTypes = []any{
 	(*ForgotPasswordResponse)(nil), // 11: urappi.auth.v1.ForgotPasswordResponse
 	(*ResetPasswordRequest)(nil),   // 12: urappi.auth.v1.ResetPasswordRequest
 	(*ResetPasswordResponse)(nil),  // 13: urappi.auth.v1.ResetPasswordResponse
-	(*GetMeResponse)(nil),          // 14: urappi.auth.v1.GetMeResponse
-	(*ValidateTokenRequest)(nil),   // 15: urappi.auth.v1.ValidateTokenRequest
-	(*ValidateTokenResponse)(nil),  // 16: urappi.auth.v1.ValidateTokenResponse
-	(*v1.User)(nil),                // 17: urappi.common.v1.User
-	(*v1.TokenPair)(nil),           // 18: urappi.common.v1.TokenPair
-	(*v1.UserContext)(nil),         // 19: urappi.common.v1.UserContext
-	(*timestamppb.Timestamp)(nil),  // 20: google.protobuf.Timestamp
-	(*v1.Empty)(nil),               // 21: urappi.common.v1.Empty
+	(*GetMeRequest)(nil),           // 14: urappi.auth.v1.GetMeRequest
+	(*GetMeResponse)(nil),          // 15: urappi.auth.v1.GetMeResponse
+	(*ValidateTokenRequest)(nil),   // 16: urappi.auth.v1.ValidateTokenRequest
+	(*ValidateTokenResponse)(nil),  // 17: urappi.auth.v1.ValidateTokenResponse
+	(*v1.User)(nil),                // 18: urappi.common.v1.User
+	(*v1.TokenPair)(nil),           // 19: urappi.common.v1.TokenPair
+	(*v1.UserContext)(nil),         // 20: urappi.common.v1.UserContext
+	(*timestamppb.Timestamp)(nil),  // 21: google.protobuf.Timestamp
 }
-var file_auth_v1_auth_proto_depIdxs = []int32{
-	17, // 0: urappi.auth.v1.RegisterResponse.user:type_name -> urappi.common.v1.User
-	18, // 1: urappi.auth.v1.LoginResponse.tokens:type_name -> urappi.common.v1.TokenPair
-	17, // 2: urappi.auth.v1.LoginResponse.user:type_name -> urappi.common.v1.User
-	18, // 3: urappi.auth.v1.RefreshTokensResponse.tokens:type_name -> urappi.common.v1.TokenPair
-	17, // 4: urappi.auth.v1.VerifyEmailResponse.user:type_name -> urappi.common.v1.User
-	17, // 5: urappi.auth.v1.GetMeResponse.user:type_name -> urappi.common.v1.User
-	19, // 6: urappi.auth.v1.ValidateTokenResponse.user_context:type_name -> urappi.common.v1.UserContext
-	20, // 7: urappi.auth.v1.ValidateTokenResponse.token_expires_at:type_name -> google.protobuf.Timestamp
+var file_urappi_auth_v1_auth_proto_depIdxs = []int32{
+	18, // 0: urappi.auth.v1.RegisterResponse.user:type_name -> urappi.common.v1.User
+	19, // 1: urappi.auth.v1.LoginResponse.tokens:type_name -> urappi.common.v1.TokenPair
+	18, // 2: urappi.auth.v1.LoginResponse.user:type_name -> urappi.common.v1.User
+	19, // 3: urappi.auth.v1.RefreshTokensResponse.tokens:type_name -> urappi.common.v1.TokenPair
+	18, // 4: urappi.auth.v1.VerifyEmailResponse.user:type_name -> urappi.common.v1.User
+	18, // 5: urappi.auth.v1.GetMeResponse.user:type_name -> urappi.common.v1.User
+	20, // 6: urappi.auth.v1.ValidateTokenResponse.user_context:type_name -> urappi.common.v1.UserContext
+	21, // 7: urappi.auth.v1.ValidateTokenResponse.token_expires_at:type_name -> google.protobuf.Timestamp
 	0,  // 8: urappi.auth.v1.AuthService.Register:input_type -> urappi.auth.v1.RegisterRequest
 	2,  // 9: urappi.auth.v1.AuthService.Login:input_type -> urappi.auth.v1.LoginRequest
 	4,  // 10: urappi.auth.v1.AuthService.RefreshTokens:input_type -> urappi.auth.v1.RefreshTokensRequest
@@ -974,8 +1011,8 @@ var file_auth_v1_auth_proto_depIdxs = []int32{
 	8,  // 12: urappi.auth.v1.AuthService.VerifyEmail:input_type -> urappi.auth.v1.VerifyEmailRequest
 	10, // 13: urappi.auth.v1.AuthService.ForgotPassword:input_type -> urappi.auth.v1.ForgotPasswordRequest
 	12, // 14: urappi.auth.v1.AuthService.ResetPassword:input_type -> urappi.auth.v1.ResetPasswordRequest
-	21, // 15: urappi.auth.v1.AuthService.GetMe:input_type -> urappi.common.v1.Empty
-	15, // 16: urappi.auth.v1.AuthService.ValidateToken:input_type -> urappi.auth.v1.ValidateTokenRequest
+	14, // 15: urappi.auth.v1.AuthService.GetMe:input_type -> urappi.auth.v1.GetMeRequest
+	16, // 16: urappi.auth.v1.AuthService.ValidateToken:input_type -> urappi.auth.v1.ValidateTokenRequest
 	1,  // 17: urappi.auth.v1.AuthService.Register:output_type -> urappi.auth.v1.RegisterResponse
 	3,  // 18: urappi.auth.v1.AuthService.Login:output_type -> urappi.auth.v1.LoginResponse
 	5,  // 19: urappi.auth.v1.AuthService.RefreshTokens:output_type -> urappi.auth.v1.RefreshTokensResponse
@@ -983,8 +1020,8 @@ var file_auth_v1_auth_proto_depIdxs = []int32{
 	9,  // 21: urappi.auth.v1.AuthService.VerifyEmail:output_type -> urappi.auth.v1.VerifyEmailResponse
 	11, // 22: urappi.auth.v1.AuthService.ForgotPassword:output_type -> urappi.auth.v1.ForgotPasswordResponse
 	13, // 23: urappi.auth.v1.AuthService.ResetPassword:output_type -> urappi.auth.v1.ResetPasswordResponse
-	14, // 24: urappi.auth.v1.AuthService.GetMe:output_type -> urappi.auth.v1.GetMeResponse
-	16, // 25: urappi.auth.v1.AuthService.ValidateToken:output_type -> urappi.auth.v1.ValidateTokenResponse
+	15, // 24: urappi.auth.v1.AuthService.GetMe:output_type -> urappi.auth.v1.GetMeResponse
+	17, // 25: urappi.auth.v1.AuthService.ValidateToken:output_type -> urappi.auth.v1.ValidateTokenResponse
 	17, // [17:26] is the sub-list for method output_type
 	8,  // [8:17] is the sub-list for method input_type
 	8,  // [8:8] is the sub-list for extension type_name
@@ -992,26 +1029,26 @@ var file_auth_v1_auth_proto_depIdxs = []int32{
 	0,  // [0:8] is the sub-list for field type_name
 }
 
-func init() { file_auth_v1_auth_proto_init() }
-func file_auth_v1_auth_proto_init() {
-	if File_auth_v1_auth_proto != nil {
+func init() { file_urappi_auth_v1_auth_proto_init() }
+func file_urappi_auth_v1_auth_proto_init() {
+	if File_urappi_auth_v1_auth_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_auth_v1_auth_proto_rawDesc), len(file_auth_v1_auth_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_urappi_auth_v1_auth_proto_rawDesc), len(file_urappi_auth_v1_auth_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   17,
+			NumMessages:   18,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_auth_v1_auth_proto_goTypes,
-		DependencyIndexes: file_auth_v1_auth_proto_depIdxs,
-		MessageInfos:      file_auth_v1_auth_proto_msgTypes,
+		GoTypes:           file_urappi_auth_v1_auth_proto_goTypes,
+		DependencyIndexes: file_urappi_auth_v1_auth_proto_depIdxs,
+		MessageInfos:      file_urappi_auth_v1_auth_proto_msgTypes,
 	}.Build()
-	File_auth_v1_auth_proto = out.File
-	file_auth_v1_auth_proto_goTypes = nil
-	file_auth_v1_auth_proto_depIdxs = nil
+	File_urappi_auth_v1_auth_proto = out.File
+	file_urappi_auth_v1_auth_proto_goTypes = nil
+	file_urappi_auth_v1_auth_proto_depIdxs = nil
 }

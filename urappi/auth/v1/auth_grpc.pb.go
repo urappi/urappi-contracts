@@ -2,13 +2,12 @@
 // versions:
 // - protoc-gen-go-grpc v1.5.1
 // - protoc             (unknown)
-// source: auth/v1/auth.proto
+// source: urappi/auth/v1/auth.proto
 
 package authv1
 
 import (
 	context "context"
-	v1 "github.com/urappi/contracts/common/v1"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -44,7 +43,8 @@ type AuthServiceClient interface {
 	VerifyEmail(ctx context.Context, in *VerifyEmailRequest, opts ...grpc.CallOption) (*VerifyEmailResponse, error)
 	ForgotPassword(ctx context.Context, in *ForgotPasswordRequest, opts ...grpc.CallOption) (*ForgotPasswordResponse, error)
 	ResetPassword(ctx context.Context, in *ResetPasswordRequest, opts ...grpc.CallOption) (*ResetPasswordResponse, error)
-	GetMe(ctx context.Context, in *v1.Empty, opts ...grpc.CallOption) (*GetMeResponse, error)
+	// Важно: отдельный request, а не общий Empty — так требует buf lint.
+	GetMe(ctx context.Context, in *GetMeRequest, opts ...grpc.CallOption) (*GetMeResponse, error)
 	ValidateToken(ctx context.Context, in *ValidateTokenRequest, opts ...grpc.CallOption) (*ValidateTokenResponse, error)
 }
 
@@ -126,7 +126,7 @@ func (c *authServiceClient) ResetPassword(ctx context.Context, in *ResetPassword
 	return out, nil
 }
 
-func (c *authServiceClient) GetMe(ctx context.Context, in *v1.Empty, opts ...grpc.CallOption) (*GetMeResponse, error) {
+func (c *authServiceClient) GetMe(ctx context.Context, in *GetMeRequest, opts ...grpc.CallOption) (*GetMeResponse, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetMeResponse)
 	err := c.cc.Invoke(ctx, AuthService_GetMe_FullMethodName, in, out, cOpts...)
@@ -159,7 +159,8 @@ type AuthServiceServer interface {
 	VerifyEmail(context.Context, *VerifyEmailRequest) (*VerifyEmailResponse, error)
 	ForgotPassword(context.Context, *ForgotPasswordRequest) (*ForgotPasswordResponse, error)
 	ResetPassword(context.Context, *ResetPasswordRequest) (*ResetPasswordResponse, error)
-	GetMe(context.Context, *v1.Empty) (*GetMeResponse, error)
+	// Важно: отдельный request, а не общий Empty — так требует buf lint.
+	GetMe(context.Context, *GetMeRequest) (*GetMeResponse, error)
 	ValidateToken(context.Context, *ValidateTokenRequest) (*ValidateTokenResponse, error)
 	mustEmbedUnimplementedAuthServiceServer()
 }
@@ -192,7 +193,7 @@ func (UnimplementedAuthServiceServer) ForgotPassword(context.Context, *ForgotPas
 func (UnimplementedAuthServiceServer) ResetPassword(context.Context, *ResetPasswordRequest) (*ResetPasswordResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ResetPassword not implemented")
 }
-func (UnimplementedAuthServiceServer) GetMe(context.Context, *v1.Empty) (*GetMeResponse, error) {
+func (UnimplementedAuthServiceServer) GetMe(context.Context, *GetMeRequest) (*GetMeResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetMe not implemented")
 }
 func (UnimplementedAuthServiceServer) ValidateToken(context.Context, *ValidateTokenRequest) (*ValidateTokenResponse, error) {
@@ -346,7 +347,7 @@ func _AuthService_ResetPassword_Handler(srv interface{}, ctx context.Context, de
 }
 
 func _AuthService_GetMe_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(v1.Empty)
+	in := new(GetMeRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -358,7 +359,7 @@ func _AuthService_GetMe_Handler(srv interface{}, ctx context.Context, dec func(i
 		FullMethod: AuthService_GetMe_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AuthServiceServer).GetMe(ctx, req.(*v1.Empty))
+		return srv.(AuthServiceServer).GetMe(ctx, req.(*GetMeRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -426,5 +427,5 @@ var AuthService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "auth/v1/auth.proto",
+	Metadata: "urappi/auth/v1/auth.proto",
 }
