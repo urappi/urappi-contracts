@@ -366,7 +366,7 @@ const file_urappi_common_v1_common_proto_rawDesc = "" +
 	"\x05Error\x12\x12\n" +
 	"\x04code\x18\x01 \x01(\tR\x04code\x12\x18\n" +
 	"\amessage\x18\x02 \x01(\tR\amessage\"\a\n" +
-	"\x05EmptyB7Z5github.com/urappi/contracts/urappi/common/v1;commonv1b\x06proto3"
+	"\x05EmptyBEZCgithub.com/urappi/urappi-contracts/gen/go/urappi/common/v1;commonv1b\x06proto3"
 
 var (
 	file_urappi_common_v1_common_proto_rawDescOnce sync.Once

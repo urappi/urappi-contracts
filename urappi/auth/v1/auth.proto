@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package urappi.auth.v1;
 
-option go_package = "github.com/urappi/contracts/urappi/common/v1;commonv1";
+option go_package = "github.com/urappi/urappi-contracts/gen/go/urappi/auth/v1;authv1";
 
 import "google/protobuf/timestamp.proto";
 import "urappi/common/v1/common.proto";
