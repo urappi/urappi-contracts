@@ -1,13 +1,7 @@
-version: v1
-
-name: buf.build/urappi/contracts
-
+version: v2
 lint:
   use:
     - STANDARD
-
 breaking:
   use:
     - FILE
-
-deps: []
